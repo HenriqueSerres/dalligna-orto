@@ -6,7 +6,7 @@ import { ImPhoneHangUp } from "react-icons/im";
 
 export default function Header() {
   return (
-    <header className='flex flex-row px-6 justify-between w-full h-24 bg-white'>
+    <header className='flex flex-row px-6 justify-between w-full bg-white'>
       <div className='mt-7 pr-4 flex flex-row gap-5'>
         <Link href='https://www.instagram.com/dalligna_ortodontia/'
           className='text-3xl hover:text-slate-300'
@@ -19,7 +19,7 @@ export default function Header() {
       </div>
       <Image
         src='/logo_horizontal.png'
-        width={300}
+        width={250}
         height={100}
         alt='Dall Igna Ortodontia'
       />
