@@ -30,7 +30,7 @@ export default function Locations() {
           <p>(51) 3346.7837 / (51) 99192.3109</p>
         </section>
       </div>
-      <div className="flex justify-center mt-4">
+      <div className="flex justify-center mt-8">
         <Link
           href="/"
           className='text-lg text-white ring bg-blue-900 ring-sky-400 ring-offset-2 dark:ring-offset-blue-900 px-6 rounded-full'
