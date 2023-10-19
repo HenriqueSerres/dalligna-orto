@@ -9,11 +9,11 @@ export default function Header() {
     <header className='flex flex-row px-6 justify-between w-full bg-white'>
       <div className='mt-7 pr-4 flex flex-row gap-5'>
         <Link href='https://www.instagram.com/dalligna_ortodontia/'
-          className='text-3xl hover:text-slate-300'
+          className='text-3xl text-blue-950 hover:text-slate-300'
         >
           <FaInstagram />
         </Link>
-        <Link className="text-3xl hover:text-slate-300" href='/locations'>
+        <Link className="text-3xl text-blue-950 hover:text-slate-300" href='/locations'>
           <FaMapMarkedAlt />
         </Link>
       </div>
@@ -23,7 +23,7 @@ export default function Header() {
         height={100}
         alt='Dall Igna Ortodontia'
       />
-      <div className="flex flex-row gap-2 mt-7">
+      <div className="flex flex-row gap-2 mt-7 text-blue-950">
         <ImPhoneHangUp />
         <p>(51) 3311.1184</p>
         <BsPhoneVibrateFill />
