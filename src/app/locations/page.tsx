@@ -2,13 +2,14 @@ import Header from "@/components/Head";
 import Image from "next/image";
 import Link from "next/link";
 import { FaPhoneAlt } from "react-icons/fa";
+import { TbExternalLink } from "react-icons/tb";
 
 export default function Locations() {
   return (
     <>
       <Header />
-      <div className="flex flex-row justify-around mt-6 gap-10 p-6">
-        <section className="flex flex-col mt-10">
+      <div className="flex flex-row justify-around mt-6 gap-6 p-6">
+        <section className="flex flex-col mt-10 px-5">
           <h1 className="flex justify-center font-extrabold p-3 underline underline-offset-8"
           >
             Tristeza
@@ -17,9 +18,15 @@ export default function Locations() {
           <p>Porto Alegre - RS</p>
           <FaPhoneAlt />
           <p>(51) 3311.1184 / (51) 99253.9490</p>
+          <Image className='mt-4' src="/tristeza_map.png" width={400} height={400} alt="mapa endereço tristeza" />
+          <Link className='text-3xl text-blue-950 hover:text-slate-400 mt-2' href='https://maps.app.goo.gl/r7RSKDTWpEJZ2WYH6'>
+            <TbExternalLink />
+          </Link>
         </section>
-        <Image src="/dente_2_2.png" width={300} height={300} alt="imagem de dente com escova" />
-        <section className="mt-10 flex flex-col">
+        <div className="mt-10">
+          <Image src="/dente_2_2.png" width={300} height={300} alt="imagem de dente com escova" />
+        </div>
+        <section className="mt-10 flex flex-col px-5">
           <h1 className="flex justify-center font-extrabold p-3 underline underline-offset-8"
           >
             Moinhos de Vento
@@ -28,6 +35,11 @@ export default function Locations() {
           <p>Porto Alegre - RS</p>
           <FaPhoneAlt />
           <p>(51) 3346.7837 / (51) 99192.3109</p>
+          <Image className='mt-4' src="/moinhos_map.png" width={400} height={400} alt="mapa endereço moinhos" />
+          <Link className='text-3xl text-blue-950 hover:text-slate-400 mt-2' href='https://maps.app.goo.gl/cfDHZnbGACxYHUQ47'
+          >
+            <TbExternalLink />
+          </Link>
         </section>
       </div>
       <div className="flex justify-center mt-8">
