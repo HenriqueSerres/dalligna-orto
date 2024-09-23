@@ -1,28 +1,33 @@
-'use client'
+'use client';
 
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { FaClinicMedical } from "react-icons/fa";
 
 export default function Nav() {
-  const [carineIsOpen, setCarineIsOpen] = useState(false)
-  const [silviaIsOpen, setSilviaIsOpen] = useState(false)
-  const escondido = 'hidden'
-  const visivel = 'z-10 mt-2 bg-white divide-y divide-gray-100 rounded-lg shadow w-fit dark:bg-gray-700 dark:divide-gray-600'
+  const [carineIsOpen, setCarineIsOpen] = useState(false);
+  const [silviaIsOpen, setSilviaIsOpen] = useState(false);
+  const escondido = 'hidden';
+  const visivel = 'z-10 mt-2 bg-white divide-y divide-gray-100 rounded-lg shadow w-fit dark:bg-gray-700 dark:divide-gray-600';
+
   return (
     <>
-      <nav className="flex flex-row justify-around gap-5 mt-12">
+      <nav className="flex flex-col items-center gap-5 mt-12 md:flex-row md:justify-around">
         <div>
-          <Link href="/practice" className="">Nossa Clínica</Link>
+          <Link href="/practice" className="flex items-center gap-2 bg-blue-950 text-white px-4 py-2 rounded-full text-lg md:text-base hover:bg-blue-700 transition-colors">
+            <FaClinicMedical className="text-white" /> {/* Ícone */}
+            Nossa Clínica
+          </Link>
         </div>
 
-        <div>
+        <div className="relative">
           <button onClick={() => setCarineIsOpen(!carineIsOpen)} className="flex mx-3 text-sm bg-blue-950 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" type="button">
             <span className="sr-only">Carine</span>
-            <Image className="w-40 h-40 rounded-full" src="/base_carine.png" alt="Carine avatar" width={200} height={200} />
+            <Image className="w-32 h-32 md:w-40 md:h-40 rounded-full" src="/base_carine.png" alt="Carine avatar" width={200} height={200} />
           </button>
 
-          <div className={carineIsOpen ? visivel : escondido}>
+          <div className={`${carineIsOpen ? visivel : escondido} absolute left-1/2 transform -translate-x-1/2 md:left-auto md:transform-none`}>
             <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
               <div>Dra. Carine Dall'Igna</div>
               <Link className="font-medium truncate" href="/locations">Zona Sul (Tristeza)</Link>
@@ -34,13 +39,14 @@ export default function Nav() {
             </ul>
           </div>
         </div>
-        <div>
+
+        <div className="relative">
           <button onClick={() => setSilviaIsOpen(!silviaIsOpen)} className="flex mx-3 text-sm bg-blue-950 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" type="button">
             <span className="sr-only">Silvia</span>
-            <Image className="w-40 h-40 rounded-full" src="/base_silvia.png" alt="Silvia avatar" width={200} height={200} />
+            <Image className="w-32 h-32 md:w-40 md:h-40 rounded-full" src="/base_silvia.png" alt="Silvia avatar" width={200} height={200} />
           </button>
 
-          <div className={silviaIsOpen ? visivel : escondido}>
+          <div className={`${silviaIsOpen ? visivel : escondido} absolute left-1/2 transform -translate-x-1/2 md:left-auto md:transform-none`}>
             <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
               <div>Dra. Silvia Dall'Igna</div>
               <Link className="font-medium truncate" href="/locations">Tristeza / Moinhos de Vento</Link>
@@ -52,8 +58,7 @@ export default function Nav() {
             </ul>
           </div>
         </div>
-
       </nav>
     </>
-  )
+  );
 }
