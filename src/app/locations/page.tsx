@@ -7,7 +7,6 @@ import { TbExternalLink } from "react-icons/tb";
 export default function Locations() {
   return (
     <>
-      <Header />
       <div className="flex flex-col items-center mt-6 gap-6 p-4">
         <section className="w-full flex flex-col items-center text-center">
           <h1 className="font-extrabold text-2xl p-3 underline underline-offset-8">Tristeza</h1>
