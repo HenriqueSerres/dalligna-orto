@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { FaClinicMedical } from "react-icons/fa";
+import { PiHouseLineThin } from "react-icons/pi";
 
 export default function Nav() {
   const [carineIsOpen, setCarineIsOpen] = useState(false);
@@ -13,10 +13,10 @@ export default function Nav() {
 
   return (
     <>
-      <nav className="flex flex-col items-center gap-5 mt-12 md:flex-row md:justify-around">
+      <nav className="flex flex-col items-center gap-10 mt-12 md:flex-row md:justify-around">
         <div>
           <Link href="/practice" className="flex items-center gap-2 bg-blue-950 text-white px-4 py-2 rounded-full text-lg md:text-base hover:bg-blue-700 transition-colors">
-            <FaClinicMedical className="text-white" /> {/* Ícone */}
+            <PiHouseLineThin className="text-white" />
             Nossa Clínica
           </Link>
         </div>

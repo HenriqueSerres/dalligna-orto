@@ -54,6 +54,11 @@ export default function Practice() {
           Estamos prontos para te ajudar a alcançar o sorriso dos seus sonhos! Entre em contato
           conosco para agendar uma consulta e conhecer mais sobre nossas opções de tratamento.
         </p>
+        <p className="text-gray-700 text-lg mt-4">
+          <Link href="/contact" className="text-blue-950 hover:underline">
+            Clique aqui
+          </Link> para agendar sua consulta.
+        </p>
       </section>
 
       <div className="flex justify-center mt-8">

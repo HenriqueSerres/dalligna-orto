@@ -8,12 +8,15 @@ export default function Header() {
   return (
     <header className="flex flex-col items-center px-6 py-4 bg-white">
       <div className="mb-4">
-        <Image
-          src="/logo_horizontal.png"
-          width={200}
-          height={80}
-          alt="Dall Igna Ortodontia"
-        />
+      <Link href="/" passHref>
+          <Image
+            src="/logo_horizontal.png"
+            width={200}
+            height={80}
+            alt="Dall Igna Ortodontia"
+            className="cursor-pointer"
+          />
+        </Link>
       </div>
 
       <div className="flex flex-row gap-4 mb-4 md:justify-between md:w-full">

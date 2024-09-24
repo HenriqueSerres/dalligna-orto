@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import Header from '@/components/Head'
 
 export const metadata: Metadata = {
   title: "Dall'Igna Ortodontia",
@@ -13,7 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className='bg-blue-200'>{children}</body>
+      <body className='bg-blue-50'>
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }
